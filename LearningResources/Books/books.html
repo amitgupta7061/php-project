@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subject Books</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-pink-100 to-yellow-100 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 shadow-xl sticky top-0 z-50">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-center space-x-4">
+        <img src="../images/cloverlogo.png" alt="Clover Logo" class="w-16 h-16 object-contain" />
+        <img src="../images/clovername.png" alt="Clover Name" class="w-72 object-contain" />
+      </div>
+      <nav class="mt-4">
+        <ul class="flex justify-center space-x-8 text-lg font-medium">
+          <li><a href="../index.php" class="hover:text-yellow-300 transition-all duration-300">Home</a></li>
+          <li><a href=../About.php" class="hover:text-yellow-300 transition-all duration-300">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="text-center py-10">
+    <h1 class="text-4xl font-extrabold text-purple-700 drop-shadow-lg">📚 Subject Books</h1>
+    <p class="mt-2 text-xl text-red-700 font-medium">Explore subjects and learn with fun!</p>
+  </div>
+
+  <!-- Book Grid -->
+  <main class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- Math Book -->
+<div class="transition-transform transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-6">
+  <div class="text-center">
+    <div class="text-6xl">🧑‍🏫</div>
+    <h2 class="text-2xl font-bold text-yellow-600 mt-2">Math</h2>
+    <p class="text-gray-600 mt-2">Solve problems, learn numbers, and master operations.</p>
+    <a href="./mbooks.html">
+      <button class="mt-4 bg-yellow-400 hover:bg-yellow-500 text-white py-2 px-6 rounded-full font-semibold transition duration-200">Read Now</button>
+    </a>
+  </div>
+</div>
+
+<!-- English Book -->
+<div class="transition-transform transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-6">
+  <div class="text-center">
+    <div class="text-6xl">📖</div>
+    <h2 class="text-2xl font-bold text-blue-600 mt-2">English</h2>
+    <p class="text-gray-600 mt-2">Improve vocabulary, grammar, and reading skills.</p>
+    <a href="./ebook.html">
+      <button class="mt-4 bg-blue-400 hover:bg-blue-500 text-white py-2 px-6 rounded-full font-semibold transition duration-200">Read Now</button>
+    </a>
+  </div>
+</div>
+
+<!-- Social Science Book -->
+<div class="transition-transform transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-6">
+  <div class="text-center">
+    <div class="text-6xl">🌍</div>
+    <h2 class="text-2xl font-bold text-red-600 mt-2">Social Science</h2>
+    <p class="text-gray-600 mt-2">Learn about people, places, history, and cultures.</p>
+    <a href="./ssbook.html">
+      <button class="mt-4 bg-red-400 hover:bg-red-500 text-white py-2 px-6 rounded-full font-semibold transition duration-200">Read Now</button>
+    </a>
+  </div>
+</div>
+
+<!-- Physical Education Book -->
+<div class="transition-transform transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-6">
+  <div class="text-center">
+    <div class="text-6xl">🏃‍♂️</div>
+    <h2 class="text-2xl font-bold text-green-600 mt-2">Physical Education</h2>
+    <p class="text-gray-600 mt-2">Discover the importance of movement, games, and health.</p>
+    <a href="./pbook.html">
+      <button class="mt-4 bg-green-400 hover:bg-green-500 text-white py-2 px-6 rounded-full font-semibold transition duration-200">Read Now</button>
+    </a>
+  </div>
+</div>
+
+  </main>
+<br><br><br>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white text-center py-4">
+    <p>&copy; 2025 Student Library | Clover Education</p>
+  </footer>
+  
+</body>
+</html>

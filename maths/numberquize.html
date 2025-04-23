@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Quiz - Clover Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-radio input:checked + span {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            transform: scale(1.05);
+        }
+        .custom-radio span {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .custom-radio input {
+            display: none;
+        }
+        .custom-radio span:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .question {
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        .correct-answer {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+        }
+        .wrong-answer {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-yellow-100 via-pink-100 to-purple-100 min-h-screen font-['Poppins']">
+    <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-center space-x-4">
+                <img src="../cloverlogo.png" alt="Clover Logo" class="w-16 h-16 object-contain" />
+                <img src="../clovername.png" alt="Clover Name" class="w-72 object-contain" />
+            </div>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-8 text-lg font-medium">
+                    <li><a href="../index.php" class="hover:text-yellow-300 transition-all duration-300">Home</a></li>
+                    <li><a href="../About.php" class="hover:text-yellow-300 transition-all duration-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-black text-purple-700 mb-4 tracking-wider bg-clip-text  bg-gradient-to-r from-purple-600 to-pink-600">
+                    🔢 Number Quiz
+                </h1>
+                <p class="text-xl text-gray-700">Test your knowledge of numbers with this fun quiz!</p>
+            </div>
+
+            <form id="quizForm" class="bg-white p-8 rounded-3xl shadow-2xl">
+                <!-- Question 1 -->
+                <div class="question bg-gradient-to-br from-purple-50 to-pink-50">
+                    <img src="../images/Three.png" alt="Three" class="w-32 h-32 mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                    <p class="text-xl font-semibold text-center mb-6">1. What is the word form of this number?</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <label class="custom-radio"><input type="radio" name="q1" value="1"><span>One</span></label>
+                        <label class="custom-radio"><input type="radio" name="q1" value="3"><span>Three</span></label>
+                        <label class="custom-radio"><input type="radio" name="q1" value="5"><span>Five</span></label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question bg-gradient-to-br from-blue-50 to-indigo-50">
+                    <img src="../images/Zero.png" alt="Zero" class="w-32 h-32 mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                    <p class="text-xl font-semibold text-center mb-6">2. What is the word form of this number?</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <label class="custom-radio"><input type="radio" name="q2" value="0"><span>Zero</span></label>
+                        <label class="custom-radio"><input type="radio" name="q2" value="6"><span>Six</span></label>
+                        <label class="custom-radio"><input type="radio" name="q2" value="2"><span>Two</span></label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question bg-gradient-to-br from-green-50 to-emerald-50">
+                    <img src="../images/six.png" alt="Six" class="w-32 h-32 mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                    <p class="text-xl font-semibold text-center mb-6">3. What is the word form of this number?</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <label class="custom-radio"><input type="radio" name="q3" value="3"><span>Three</span></label>
+                        <label class="custom-radio"><input type="radio" name="q3" value="9"><span>Nine</span></label>
+                        <label class="custom-radio"><input type="radio" name="q3" value="6"><span>Six</span></label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question bg-gradient-to-br from-yellow-50 to-amber-50">
+                    <img src="../images/four.png" alt="Four" class="w-32 h-32 mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                    <p class="text-xl font-semibold text-center mb-6">4. What is the word form of this number?</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <label class="custom-radio"><input type="radio" name="q4" value="4"><span>Four</span></label>
+                        <label class="custom-radio"><input type="radio" name="q4" value="8"><span>Eight</span></label>
+                        <label class="custom-radio"><input type="radio" name="q4" value="2"><span>Two</span></label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question bg-gradient-to-br from-red-50 to-pink-50">
+                    <img src="../images/Ten.png" alt="Ten" class="w-32 h-32 mx-auto mb-6 transform hover:scale-110 transition-transform duration-300">
+                    <p class="text-xl font-semibold text-center mb-6">5. What is the word form of this number?</p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <label class="custom-radio"><input type="radio" name="q5" value="5"><span>Five</span></label>
+                        <label class="custom-radio"><input type="radio" name="q5" value="10"><span>Ten</span></label>
+                        <label class="custom-radio"><input type="radio" name="q5" value="2"><span>Two</span></label>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button type="button" onclick="checkQuiz()" 
+                            class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-bold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                        Submit Quiz
+                    </button>
+                </div>
+            </form>
+
+            <div id="result" class="mt-8 p-6 bg-white rounded-3xl shadow-xl text-center hidden">
+                <h2 class="text-2xl font-bold text-purple-700 mb-4">Quiz Results</h2>
+                <div id="score" class="text-xl font-semibold mb-4"></div>
+                <div id="answers" class="space-y-4"></div>
+                <button onclick="resetQuiz()" 
+                        class="mt-6 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-xl font-medium transform transition-all duration-300 hover:scale-105">
+                    Try Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 mt-20">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-medium">&copy; 2025 Clover Education. All rights reserved. 🌱</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-yellow-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const correctAnswers = {
+            q1: "3",
+            q2: "0",
+            q3: "6",
+            q4: "4",
+            q5: "10"
+        };
+
+        function checkQuiz() {
+            let score = 0;
+            const resultDiv = document.getElementById('result');
+            const scoreDiv = document.getElementById('score');
+            const answersDiv = document.getElementById('answers');
+            
+            resultDiv.classList.remove('hidden');
+            answersDiv.innerHTML = '';
+
+            for (let i = 1; i <= 5; i++) {
+                const selected = document.querySelector(`input[name="q${i}"]:checked`);
+                const questionDiv = document.querySelector(`.question:nth-child(${i})`);
+                
+                if (selected) {
+                    if (selected.value === correctAnswers[`q${i}`]) {
+                        score++;
+                        questionDiv.classList.add('correct-answer');
+                    } else {
+                        questionDiv.classList.add('wrong-answer');
+                    }
+                }
+
+                // Show correct answer
+                const answerText = `Question ${i}: The correct answer is ${correctAnswers[`q${i}`]}`;
+                answersDiv.innerHTML += `<p class="text-lg ${selected && selected.value === correctAnswers[`q${i}`] ? 'text-green-600' : 'text-red-600'}">${answerText}</p>`;
+            }
+
+            scoreDiv.innerHTML = `You scored ${score} out of 5!`;
+            scoreDiv.className = `text-2xl font-bold ${score >= 3 ? 'text-green-600' : 'text-red-600'}`;
+        }
+
+        function resetQuiz() {
+            document.getElementById('quizForm').reset();
+            document.getElementById('result').classList.add('hidden');
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(q => {
+                q.classList.remove('correct-answer', 'wrong-answer');
+            });
+        }
+    </script>
+</body>
+</html>

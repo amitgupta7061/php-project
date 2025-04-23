@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Science Adventure</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-100 via-blue-100 to-yellow-100 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 shadow-xl sticky top-0 z-50">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-center space-x-4">
+        <img src="../images/cloverlogo.png" alt="Clover Logo" class="w-16 h-16 object-contain" />
+        <img src="../images/clovername.png" alt="Clover Name" class="w-72 object-contain" />
+      </div>
+      <nav class="mt-4">
+        <ul class="flex justify-center space-x-8 text-lg font-medium">
+          <li><a href="../index.php" class="hover:text-yellow-300 transition-all duration-300">Home</a></li>
+          <li><a href=../About.php" class="hover:text-yellow-300 transition-all duration-300">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="text-center py-10">
+    <h1 class="text-4xl font-extrabold text-blue-600 drop-shadow-md">🧪 Science Adventure</h1>
+    <p class="mt-4 text-2xl text-pink-800 font-medium">Learn cool science facts through exciting quizzes!</p>
+    <div class="mt-4 text-3xl font-bold text-red-500" id="timer">⏳ Time Left: 5:00</div>
+  </div>
+
+  <!-- Quiz Section -->
+  <main class="max-w-4xl mx-auto bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-green-200" id="quiz">
+    <form id="quizForm" class="space-y-10">
+
+      <!-- Easy Level -->
+      <div>
+        <h2 class="text-3xl font-bold text-green-600 mb-4">🔬 Easy Level</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">1. What planet do we live on?</h3>
+            <div class="mt-2 space-y-2">
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q0" value="Mars" class="mr-2"> Mars
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q0" value="Earth" class="mr-2"> Earth
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q0" value="Venus" class="mr-2"> Venus
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">2. Which part of the body helps us to see?</h3>
+            <div class="mt-2 space-y-2">
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q1" value="Hands" class="mr-2"> Hands
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q1" value="Eyes" class="mr-2"> Eyes
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q1" value="Legs" class="mr-2"> Legs
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medium Level -->
+      <div>
+        <h2 class="text-3xl font-bold text-yellow-600 mt-8 mb-4">🧬 Medium Level</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">3. What gas do plants use to make food?</h3>
+            <div class="mt-2 space-y-2">
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q2" value="Oxygen" class="mr-2"> Oxygen
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q2" value="Carbon Dioxide" class="mr-2"> Carbon Dioxide
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q2" value="Hydrogen" class="mr-2"> Hydrogen
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">4. Which organ pumps blood through the body?</h3>
+            <div class="mt-2 space-y-2">
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q3" value="Lungs" class="mr-2"> Lungs
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q3" value="Heart" class="mr-2"> Heart
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q3" value="Liver" class="mr-2"> Liver
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hard Level -->
+      <div>
+        <h2 class="text-3xl font-bold text-red-600 mt-8 mb-4">🌋 Hard Level</h2>
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">5. What force pulls objects toward the Earth?</h3>
+            <div class="mt-2 space-y-2">
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q4" value="Magnetism" class="mr-2"> Magnetism
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q4" value="Gravity" class="mr-2"> Gravity
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q4" value="Friction" class="mr-2"> Friction
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-semibold text-blue-800">6. Which part of the plant makes food?</h3>
+            <div class="mt-2 space-y-2">
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q5" value="Stem" class="mr-2"> Stem
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q5" value="Leaves" class="mr-2"> Leaves
+              </label>
+              <label class="block p-3 rounded-xl bg-blue-100 hover:bg-blue-200 cursor-pointer">
+                <input type="radio" name="q5" value="Roots" class="mr-2"> Roots
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- Submit Button -->
+    <div class="text-center mt-10">
+      <button onclick="submitQuiz()" 
+      class="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white 
+      text-xl font-semibold py-3 px-10 rounded-full shadow-lg transition-all">
+        ✅ Submit
+      </button>
+    </div>
+
+    <div class="text-center mt-8 text-2xl font-semibold text-green-600 hidden" id="submittedMsg">
+      🎉 Well done! You completed the Science Adventure!
+    </div>
+
+    <!-- Results Section -->
+    <div id="results" class="hidden mt-8 space-y-6">
+      <h2 class="text-3xl font-bold text-center text-blue-700 mb-6">📊 Your Results</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Easy Level Results -->
+        <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200">
+          <h3 class="text-2xl font-bold text-green-600 mb-4">🔬 Easy Level</h3>
+          <div class="space-y-4">
+            <div class="result-item" data-question="0">
+              <p class="text-lg font-semibold text-gray-800">1. What planet do we live on?</p>
+              <p class="text-green-600 font-medium">Correct Answer: Earth</p>
+              <p class="text-gray-600">Your Answer: <span class="user-answer"></span></p>
+            </div>
+            <div class="result-item" data-question="1">
+              <p class="text-lg font-semibold text-gray-800">2. Which part of the body helps us to see?</p>
+              <p class="text-green-600 font-medium">Correct Answer: Eyes</p>
+              <p class="text-gray-600">Your Answer: <span class="user-answer"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medium Level Results -->
+        <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200">
+          <h3 class="text-2xl font-bold text-yellow-600 mb-4">🧬 Medium Level</h3>
+          <div class="space-y-4">
+            <div class="result-item" data-question="2">
+              <p class="text-lg font-semibold text-gray-800">3. What gas do plants use to make food?</p>
+              <p class="text-green-600 font-medium">Correct Answer: Carbon Dioxide</p>
+              <p class="text-gray-600">Your Answer: <span class="user-answer"></span></p>
+            </div>
+            <div class="result-item" data-question="3">
+              <p class="text-lg font-semibold text-gray-800">4. Which organ pumps blood through the body?</p>
+              <p class="text-green-600 font-medium">Correct Answer: Heart</p>
+              <p class="text-gray-600">Your Answer: <span class="user-answer"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hard Level Results -->
+        <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200">
+          <h3 class="text-2xl font-bold text-red-600 mb-4">🌋 Hard Level</h3>
+          <div class="space-y-4">
+            <div class="result-item" data-question="4">
+              <p class="text-lg font-semibold text-gray-800">5. What force pulls objects toward the Earth?</p>
+              <p class="text-green-600 font-medium">Correct Answer: Gravity</p>
+              <p class="text-gray-600">Your Answer: <span class="user-answer"></span></p>
+            </div>
+            <div class="result-item" data-question="5">
+              <p class="text-lg font-semibold text-gray-800">6. Which part of the plant makes food?</p>
+              <p class="text-green-600 font-medium">Correct Answer: Leaves</p>
+              <p class="text-gray-600">Your Answer: <span class="user-answer"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Score Summary -->
+      <div class="mt-8 text-center">
+        <div class="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white p-6 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-2">Your Score</h3>
+          <p class="text-4xl font-extrabold" id="score">0/6</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <br><br>
+
+  <!-- Footer -->
+   <footer class="bg-green-600 text-white text-center py-4">
+    <p>&copy; 2025 Science Adventure | Clover Education.</p>
+</footer>
+
+  <!-- Timer Script -->
+  <script>
+    let time = 300;
+    const timer = document.getElementById("timer");
+    const timerInterval = setInterval(() => {
+      if (time > 0) {
+        time--;
+        let min = Math.floor(time / 60);
+        let sec = time % 60;
+        timer.textContent = `⏳ Time Left: ${min}:${sec < 10 ? '0' : ''}${sec}`;
+      } else {
+        clearInterval(timerInterval);
+        submitQuiz();
+      }
+    }, 1000);
+
+    const correctAnswers = {
+      q0: "Earth",
+      q1: "Eyes",
+      q2: "Carbon Dioxide",
+      q3: "Heart",
+      q4: "Gravity",
+      q5: "Leaves"
+    };
+
+    function submitQuiz() {
+      clearInterval(timerInterval);
+      document.getElementById("submittedMsg").classList.remove("hidden");
+      document.getElementById("results").classList.remove("hidden");
+
+      let score = 0;
+      const form = document.getElementById("quizForm");
+      const formData = new FormData(form);
+
+      // Show user's answers and calculate score
+      for (let i = 0; i < 6; i++) {
+        const questionName = `q${i}`;
+        const userAnswer = formData.get(questionName);
+        const resultItem = document.querySelector(`.result-item[data-question="${i}"] .user-answer`);
+        
+        if (userAnswer) {
+          resultItem.textContent = userAnswer;
+          if (userAnswer === correctAnswers[questionName]) {
+            score++;
+            resultItem.classList.add("text-green-600", "font-bold");
+          } else {
+            resultItem.classList.add("text-red-600", "font-bold");
+          }
+        } else {
+          resultItem.textContent = "Not answered";
+          resultItem.classList.add("text-gray-500");
+        }
+      }
+
+      // Update score display
+      document.getElementById("score").textContent = `${score}/6`;
+    }
+  </script>
+</body>
+</html>

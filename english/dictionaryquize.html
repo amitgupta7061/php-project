@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Quiz - Clover Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-amber-100 via-pink-100 to-purple-100 min-h-screen">
+    <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-center space-x-4">
+                <img src="../images/cloverlogo.png" alt="Clover Logo" class="w-16 h-16 object-contain" />
+                <img src="../images/clovername.png" alt="Clover Name" class="w-72 object-contain" />
+            </div>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-8 text-lg font-medium">
+                    <li><a href="../index.php" class="hover:text-yellow-300 transition-all duration-300">Home</a></li>
+                    <li><a href="../About.php" class="hover:text-yellow-300 transition-all duration-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black text-purple-700 mb-4 tracking-wider bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                📚 Dictionary Quiz
+            </h1>
+            <p class="text-xl text-gray-700">Test your vocabulary knowledge!</p>
+        </div>
+
+        <form id="quizForm" class="w-full max-w-3xl mx-auto space-y-8">
+            <!-- Question 1 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">1. What is the meaning of the word <span class="text-blue-600">"brisk"</span>?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q1" value="slow" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Slow</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q1" value="quick" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Quick</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q1" value="lazy" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Lazy</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">2. What does <span class="text-blue-600">"benevolent"</span> mean?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q2" value="kind" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Kind</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q2" value="angry" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Angry</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q2" value="rude" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Rude</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">3. What does the word <span class="text-blue-600">"ancient"</span> describe?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q3" value="modern" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Modern</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q3" value="old" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Old</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q3" value="new" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">New</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">4. What is the meaning of <span class="text-blue-600">"fragile"</span>?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q4" value="strong" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Strong</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q4" value="weak" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Weak</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q4" value="easily broken" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">breakable</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">5. What does <span class="text-blue-600">"vivid"</span> mean?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q5" value="dull" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Dull</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q5" value="bright" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Bright</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q5" value="dark" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Dark</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">6. What is the meaning of <span class="text-blue-600">"generous"</span>?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q6" value="greedy" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Greedy</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q6" value="mean" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Mean</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q6" value="kind and giving" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Kind</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">7. What does <span class="text-blue-600">"gigantic"</span> mean?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q7" value="tiny" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Tiny</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q7" value="huge" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Huge</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q7" value="fast" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Fast</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">8. What is the meaning of <span class="text-blue-600">"swift"</span>?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q8" value="quick" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Quick</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q8" value="slow" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Slow</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q8" value="sleepy" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Sleepy</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">9. What does <span class="text-blue-600">"polite"</span> mean?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q9" value="respectful" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Respect</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q9" value="rude" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Rude</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q9" value="noisy" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Noisy</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <p class="text-2xl font-bold text-center text-purple-700 mb-6">10. What is the meaning of <span class="text-blue-600">"silent"</span>?</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q10" value="quiet" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Quiet</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q10" value="loud" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Loud</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q10" value="bright" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Bright</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-medium text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    Submit Quiz
+                </button>
+                <p id="errorMessage" class="text-red-600 mt-4 font-semibold hidden">
+                    Please answer all the questions before submitting.
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <footer class="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 mt-20">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-medium">&copy; 2025 Clover Education. All rights reserved. 🌱</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-yellow-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add radio button selection styling
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const parentLabel = this.closest('label');
+                const allLabels = document.querySelectorAll(`input[name="${this.name}"]`).forEach(input => {
+                    const label = input.closest('label');
+                    const innerCircle = label.querySelector('span span');
+                    if (input === this) {
+                        label.classList.add('border-purple-400', 'bg-purple-50');
+                        innerCircle.classList.remove('hidden');
+                    } else {
+                        label.classList.remove('border-purple-400', 'bg-purple-50');
+                        innerCircle.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const correctAnswers = {
+                q1: 'quick',
+                q2: 'kind',
+                q3: 'old',
+                q4: 'easily broken',
+                q5: 'bright',
+                q6: 'kind and giving',
+                q7: 'huge',
+                q8: 'quick',
+                q9: 'respectful',
+                q10: 'quiet'
+            };
+
+            const explanations = {
+                q1: "Brisk means quick and energetic in movement or action.",
+                q2: "Benevolent means kind and generous, showing goodwill.",
+                q3: "Ancient refers to something very old, from a long time ago.",
+                q4: "Fragile means easily broken or damaged.",
+                q5: "Vivid means bright and intense in color or appearance.",
+                q6: "Generous means showing a readiness to give more than is necessary.",
+                q7: "Gigantic means extremely large in size or extent.",
+                q8: "Swift means happening quickly or promptly.",
+                q9: "Polite means showing good manners and respect for others.",
+                q10: "Silent means making no sound or noise."
+            };
+
+            // Process each question
+            Object.keys(correctAnswers).forEach(questionName => {
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+                const allOptions = document.querySelectorAll(`input[name="${questionName}"]`);
+                
+                allOptions.forEach(option => {
+                    const label = option.closest('label');
+                    if (option.value === correctAnswers[questionName]) {
+                        label.classList.add('border-green-500', 'bg-green-50');
+                        label.querySelector('span span').classList.add('bg-green-500');
+                    } else if (selectedAnswer && option.value === selectedAnswer.value) {
+                        label.classList.add('border-red-500', 'bg-red-50');
+                        label.querySelector('span span').classList.add('bg-red-500');
+                    }
+                });
+
+                // Add explanation
+                const questionDiv = selectedAnswer.closest('div');
+                const explanationDiv = document.createElement('div');
+                explanationDiv.className = 'mt-4 p-4 bg-purple-50 rounded-xl text-purple-700';
+                explanationDiv.innerHTML = `
+                    <p class="font-semibold">Explanation:</p>
+                    <p>${explanations[questionName]}</p>
+                `;
+                questionDiv.appendChild(explanationDiv);
+            });
+
+            // Disable all inputs after submission
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.disabled = true;
+            });
+
+            // Change submit button to show completion
+            const submitButton = document.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Quiz Completed!';
+            submitButton.classList.remove('from-purple-600', 'to-pink-600');
+            submitButton.classList.add('from-green-600', 'to-green-700');
+        });
+    </script>
+</body>
+</html>

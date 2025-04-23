@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sports Puzzles - Clover Education</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-amber-100 via-pink-100 to-purple-100 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 shadow-xl sticky top-0 z-50">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-center space-x-4">
+        <img src="../images/cloverlogo.png" alt="Clover Logo" class="w-16 h-16 object-contain" />
+        <img src="../images/clovername.png" alt="Clover Name" class="w-72 object-contain" />
+      </div>
+      <nav class="mt-4">
+        <ul class="flex justify-center space-x-8 text-lg font-medium">
+          <li><a href="../index.php" class="hover:text-yellow-300 transition-all duration-300">Home</a></li>
+          <li><a href=../About.php" class="hover:text-yellow-300 transition-all duration-300">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="text-center py-12 px-4">
+    <h1 class="text-5xl font-black text-blue-700 mb-4 tracking-wider bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+      Sports Puzzles
+    </h1>
+    <h2 class="text-3xl font-bold text-indigo-700 mb-2">Test Your Sports Knowledge! ⚽🏏</h2>
+    <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+      Challenge yourself with these fun sports puzzles about equipment, team sports, and famous players.
+    </p>
+  </section>
+
+  <!-- Content -->
+  <div class="max-w-4xl mx-auto px-6">
+    <form id="puzzleForm" class="space-y-8">
+      <!-- Find the Equipment -->
+      <div class="group">
+        <div class="bg-white rounded-3xl p-8 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group-hover:border-blue-500 border-2 border-transparent">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+              <span class="text-3xl">🏏</span>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-center text-blue-700 mb-6">Find the Equipment</h2>
+          <div class="space-y-6">
+            <div>
+              <p class="text-lg font-medium text-gray-700 mb-2">1. What equipment is used to hit the ball in cricket?</p>
+              <input type="text" name="q1" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300" placeholder="Your answer" />
+              <div id="answer1" class="hidden mt-2 p-3 rounded-lg bg-green-50 border border-green-200">
+                <p class="text-green-700 font-medium">Correct Answer: Bat</p>
+                <p class="text-gray-600 mt-1">A cricket bat is used by the batsman to hit the ball in the game of cricket.</p>
+              </div>
+            </div>
+            <div>
+              <p class="text-lg font-medium text-gray-700 mb-2">2. What is worn on the feet while playing football?</p>
+              <input type="text" name="q2" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all duration-300" placeholder="Your answer" />
+              <div id="answer2" class="hidden mt-2 p-3 rounded-lg bg-green-50 border border-green-200">
+                <p class="text-green-700 font-medium">Correct Answer: Cleats</p>
+                <p class="text-gray-600 mt-1">Cleats are special shoes with studs on the bottom that help players grip the ground while playing football.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Sport Match -->
+      <div class="group">
+        <div class="bg-white rounded-3xl p-8 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group-hover:border-green-500 border-2 border-transparent">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+              <span class="text-3xl">⚽</span>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-center text-green-700 mb-6">Team Sport Match</h2>
+          <div class="space-y-6">
+            <div>
+              <p class="text-lg font-medium text-gray-700 mb-2">3. Which sport is played with 11 players per team and a goalpost?</p>
+              <input type="text" name="q3" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-300" placeholder="Your answer" />
+              <div id="answer3" class="hidden mt-2 p-3 rounded-lg bg-green-50 border border-green-200">
+                <p class="text-green-700 font-medium">Correct Answer: Football</p>
+                <p class="text-gray-600 mt-1">Football is played with 11 players on each team, and the objective is to score goals by getting the ball into the opponent's goalpost.</p>
+              </div>
+            </div>
+            <div>
+              <p class="text-lg font-medium text-gray-700 mb-2">4. Which game is played with a bat, ball, and two teams?</p>
+              <input type="text" name="q4" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all duration-300" placeholder="Your answer" />
+              <div id="answer4" class="hidden mt-2 p-3 rounded-lg bg-green-50 border border-green-200">
+                <p class="text-green-700 font-medium">Correct Answer: Cricket</p>
+                <p class="text-gray-600 mt-1">Cricket is a bat-and-ball game played between two teams of 11 players each.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Who's the Player -->
+      <div class="group">
+        <div class="bg-white rounded-3xl p-8 shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group-hover:border-red-500 border-2 border-transparent">
+          <div class="flex items-center justify-center mb-6">
+            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
+              <span class="text-3xl">👤</span>
+            </div>
+          </div>
+          <h2 class="text-2xl font-bold text-center text-red-700 mb-6">Who's the Player?</h2>
+          <div class="space-y-6">
+            <div>
+              <p class="text-lg font-medium text-gray-700 mb-2">5. Who is known as the "Master Blaster" in cricket?</p>
+              <input type="text" name="q5" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all duration-300" placeholder="Your answer" />
+              <div id="answer5" class="hidden mt-2 p-3 rounded-lg bg-green-50 border border-green-200">
+                <p class="text-green-700 font-medium">Correct Answer: Sachin Tendulkar</p>
+                <p class="text-gray-600 mt-1">Sachin Tendulkar is known as the "Master Blaster" for his exceptional batting skills in cricket.</p>
+              </div>
+            </div>
+            <div>
+              <p class="text-lg font-medium text-gray-700 mb-2">6. Who is a famous football player from Portugal?</p>
+              <input type="text" name="q6" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-red-500 focus:ring-2 focus:ring-red-200 transition-all duration-300" placeholder="Your answer" />
+              <div id="answer6" class="hidden mt-2 p-3 rounded-lg bg-green-50 border border-green-200">
+                <p class="text-green-700 font-medium">Correct Answer: Cristiano Ronaldo</p>
+                <p class="text-gray-600 mt-1">Cristiano Ronaldo is one of the greatest football players from Portugal, known for his incredible skills and achievements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-2xl italic text-red-500 mb-6">Write your answers and check the answers after clicking the button!</p>
+        
+        <button
+          type="button"
+          onclick="showAnswers()"
+          class="bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-300"
+        >
+          Show Answers
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 mt-20">
+    <div class="container mx-auto text-center">
+      <p class="text-lg font-medium">&copy; 2025 Clover Education. Test Your Sports Knowledge! ⚽</p>
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="#" class="hover:text-yellow-300 transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-yellow-300 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-yellow-300 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Simple JavaScript to show answers -->
+  <script>
+    function showAnswers() {
+      // Show all answers
+      for (let i = 1; i <= 6; i++) {
+        document.getElementById('answer' + i).classList.remove('hidden');
+      }
+      
+      // Disable all inputs
+      const inputs = document.querySelectorAll('input[type="text"]');
+      inputs.forEach(input => {
+        input.disabled = true;
+      });
+
+      // Change button text and style
+      const submitButton = document.querySelector('button[type="button"]');
+      submitButton.textContent = 'Answers Shown!';
+      submitButton.classList.remove('from-green-600', 'to-green-700', 'hover:shadow-xl', 'hover:scale-105');
+      submitButton.classList.add('bg-gray-400', 'cursor-not-allowed');
+      submitButton.disabled = true;
+    }
+  </script>
+</body>
+</html>

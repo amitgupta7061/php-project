@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Quiz - Clover Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-amber-100 via-pink-100 to-purple-100 min-h-screen">
+    <header class="bg-gradient-to-r from-green-600 to-green-700 text-white p-6 shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-center space-x-4">
+                <img src="../images/cloverlogo.png" alt="Clover Logo" class="w-16 h-16 object-contain" />
+                <img src="../images/clovername.png" alt="Clover Name" class="w-72 object-contain" />
+            </div>
+            <nav class="mt-4">
+                <ul class="flex justify-center space-x-8 text-lg font-medium">
+                    <li><a href="../index.php" class="hover:text-yellow-300 transition-all duration-300">Home</a></li>
+                    <li><a href="../About.php" class="hover:text-yellow-300 transition-all duration-300">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black text-purple-700 mb-4 tracking-wider bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                📚 Story Quiz
+            </h1>
+            <p class="text-xl text-gray-700">Read each story and answer the moral-based questions.</p>
+        </div>
+
+        <form id="quizForm" class="w-full max-w-3xl mx-auto space-y-12">
+            <!-- Story 1: Ant and Grasshopper -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <h2 class="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    1. The Ant and the Grasshopper
+                </h2>
+                <p class="mb-6 text-lg text-gray-700 leading-relaxed">
+                    One summer's day, a grasshopper was hopping about, singing and enjoying the sun. He saw an ant working hard to store food for winter. The grasshopper laughed at the ant and told him to relax and enjoy life. The ant replied, "I'm storing food for the cold months—you should do the same." But the grasshopper didn't listen. When winter came, the grasshopper had no food and went hungry, while the ant had plenty to eat.
+                </p>
+                <h3 class="text-xl font-semibold mb-4 text-purple-700">What is the moral of the story?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q1" value="A" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Always share with friends.</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q1" value="B" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Prepare today for the needs of tomorrow.</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q1" value="C" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Music is important.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Story 2: The Boy Who Cried Wolf -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <h2 class="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    2. The Boy Who Cried Wolf
+                </h2>
+                <p class="mb-6 text-lg text-gray-700 leading-relaxed">
+                    A young shepherd boy grew bored while watching his sheep. To amuse himself, he cried, "Wolf! Wolf!" even though no wolf was near. The villagers came running to help, but the boy laughed and admitted it was a joke. He did this again, and once more, the villagers came running. But when a real wolf actually appeared, and the boy shouted for help, no one came because they thought he was lying again. The wolf ate the sheep.
+                </p>
+                <h3 class="text-xl font-semibold mb-4 text-purple-700">What is the moral of the story?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q2" value="A" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Always listen to children.</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q2" value="B" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Wolves are scary.</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q2" value="C" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">No one believes a liar even when he tells the truth.</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Story 3: The Fox and the Grapes -->
+            <div class="bg-white p-8 rounded-3xl shadow-xl transform transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
+                <h2 class="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                    3. The Fox and the Grapes
+                </h2>
+                <p class="mb-6 text-lg text-gray-700 leading-relaxed">
+                    A hungry fox saw some juicy grapes hanging high on a vine. He tried and tried to jump up and reach them, but no matter how hard he tried, he couldn't get to them. Finally, he gave up and walked away, saying, "Those grapes are probably sour anyway." He convinced himself he didn't want them, even though he did.
+                </p>
+                <h3 class="text-xl font-semibold mb-4 text-purple-700">What is the moral of the story?</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q3" value="A" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Always eat grapes when hungry.</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q3" value="B" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">It's easy to despise what you can't have.</span>
+                    </label>
+                    <label class="flex items-center p-4 rounded-xl border-2 border-gray-200 hover:border-purple-400 hover:bg-purple-50 transition-all duration-300 cursor-pointer">
+                        <input type="radio" name="q3" value="C" class="hidden">
+                        <span class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4">
+                            <span class="w-4 h-4 rounded-full bg-purple-600 hidden"></span>
+                        </span>
+                        <span class="text-lg">Jumping helps you grow stronger.</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-medium text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    Submit Quiz
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="bg-gradient-to-r from-green-600 to-green-700 text-white py-8 mt-20">
+        <div class="container mx-auto text-center">
+            <p class="text-lg font-medium">&copy; 2025 Clover Education. All rights reserved. 🌱</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-yellow-300 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-yellow-300 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add radio button selection styling
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const parentLabel = this.closest('label');
+                const allLabels = document.querySelectorAll(`input[name="${this.name}"]`).forEach(input => {
+                    const label = input.closest('label');
+                    const innerCircle = label.querySelector('span span');
+                    if (input === this) {
+                        label.classList.add('border-purple-400', 'bg-purple-50');
+                        innerCircle.classList.remove('hidden');
+                    } else {
+                        label.classList.remove('border-purple-400', 'bg-purple-50');
+                        innerCircle.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const correctAnswers = {
+                q1: 'B', // Prepare today for the needs of tomorrow
+                q2: 'C', // No one believes a liar even when he tells the truth
+                q3: 'B'  // It's easy to despise what you can't have
+            };
+
+            const explanations = {
+                q1: "The story teaches us the importance of planning ahead and working hard for the future, just like the ant did.",
+                q2: "The story shows that when someone lies repeatedly, others stop believing them even when they tell the truth.",
+                q3: "The fox couldn't reach the grapes, so he convinced himself they weren't worth having, showing how we often devalue what we can't obtain."
+            };
+
+            // Process each question
+            Object.keys(correctAnswers).forEach(questionName => {
+                const selectedAnswer = document.querySelector(`input[name="${questionName}"]:checked`);
+                const allOptions = document.querySelectorAll(`input[name="${questionName}"]`);
+                
+                allOptions.forEach(option => {
+                    const label = option.closest('label');
+                    if (option.value === correctAnswers[questionName]) {
+                        label.classList.add('border-green-500', 'bg-green-50');
+                        label.querySelector('span span').classList.add('bg-green-500');
+                    } else if (selectedAnswer && option.value === selectedAnswer.value) {
+                        label.classList.add('border-red-500', 'bg-red-50');
+                        label.querySelector('span span').classList.add('bg-red-500');
+                    }
+                });
+
+                // Add explanation
+                const questionDiv = selectedAnswer.closest('div');
+                const explanationDiv = document.createElement('div');
+                explanationDiv.className = 'mt-4 p-4 bg-purple-50 rounded-xl text-purple-700';
+                explanationDiv.innerHTML = `
+                    <p class="font-semibold">Explanation:</p>
+                    <p>${explanations[questionName]}</p>
+                `;
+                questionDiv.appendChild(explanationDiv);
+            });
+
+            // Disable all inputs after submission
+            document.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.disabled = true;
+            });
+
+            // Change submit button to show completion
+            const submitButton = document.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Quiz Completed!';
+            submitButton.classList.remove('from-purple-600', 'to-pink-600');
+            submitButton.classList.add('from-green-600', 'to-green-700');
+        });
+    </script>
+</body>
+</html>
